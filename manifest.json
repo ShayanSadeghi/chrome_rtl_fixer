@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "RTL Website Element Modifier",
+  "version": "1.0",
+  "icons": {
+    "16": "hello.png"
+  },
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://developer.chrome.com/*",
+        "https://www.linkedin.com/feed/*"
+      ],
+      "js": ["scripts/rtlContent.js"]
+    }
+  ]
+}
